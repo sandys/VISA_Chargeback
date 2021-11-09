@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'
+	debug="false">
+
+	<appender name="applog" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="target/test.log" />
+		<param name="Append" value="false" />
+		<param name="MaxFileSize" value="5000KB" />
+		<param name="MaxBackupIndex" value="20" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p [%t] %d{ISO8601} [%X{TXN_ID}] - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="WARN" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- The default pattern: Date Priority [Category] Message\n -->
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+
+	<logger name="com.incomm" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="applog" />
+	</logger>
+
+	
+	<logger name="org.springframework.jdbc" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</log4j:configuration>
+

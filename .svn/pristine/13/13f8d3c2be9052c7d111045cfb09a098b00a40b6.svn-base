@@ -1,0 +1,4 @@
+com\incomm\esb\fraudreporting\TestVisaFraudReportingAPIUtils.class
+com\incomm\esb\chargeback\TestGetDateRangeFromTranID.class
+com\incomm\esb\chargeback\TestUtil.class
+com\incomm\esb\chargeback\TestVisaChargebackAPIUtil.class

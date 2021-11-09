@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.incomm.esb.chargeback.TestGetDateRangeFromTranID
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.232 sec <<< FAILURE! - in com.incomm.esb.chargeback.TestGetDateRangeFromTranID
+testGetStartAndEndDate  Time elapsed: 0.23 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2017-08-05> but was: <2027-08-05>
+	at com.incomm.esb.chargeback.TestGetDateRangeFromTranID.testGetStartAndEndDate(TestGetDateRangeFromTranID.java:13)
+
